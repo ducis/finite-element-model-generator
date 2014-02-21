@@ -1,0 +1,52 @@
+! ----------------------------------------------------------------------
+! 
+! Course: ME364
+! Project: Structure Analysis of Gantry
+! Analysed by: Du Xi
+! Date:   
+! Director: 
+! ----------------------------------------------------------------------
+
+FINISH 
+/CLEAR 
+/FILNAME, ZZZ, ON
+/TITLE, ZZZZZZ
+/PREP7
+
+LOCAL,11,0,0,0,1250
+WPCSYS,,11
+CSDELE,ALL
+
+! Define Material Properties, Unit: kg/mm/N
+! ----------------------------------------------------------------------
+MP, EX,   1, 2.1E5
+MP, PRXY, 1, 0.3
+MP, DENS, 1, 7.8E-6 
+
+! Section definitions
+! MAIN BEAM
+SECTYPE, 1, BEAM, I, I400, 0
+SECDATA, 204, 204, 400, 18, 18, 25
+SECTYPE, 2, BEAM, I, I280, 0
+SECDATA, 168, 168, 280, 12.5, 12.5, 19
+SECTYPE, 3, BEAM, I, I160, 0
+SECDATA, 130, 130, 160, 10, 10, 17
+SECTYPE, 4, BEAM, T, T125, 0
+SECDATA, 160, 125, 8, 16
+SECTYPE, 5, BEAM, T, T90, 0
+SECDATA, 112, 90, 8, 16
+SECTYPE, 6, BEAM, T, T75, 0
+SECDATA, 150, 75, 8, 16
+SECTYPE, 7, BEAM, CHAN, LL75, 0
+SECDATA, 75,75,150,8,8,8
+SECTYPE, 8, BEAM, CHAN, C160, 0
+SECDATA, 65,65,160,10,10,8.5
+SECTYPE, 9, BEAM, L, L75, 0
+SECDATA, 75,75,8,8
+SECTYPE, 10, BEAM, I, I200, 0
+SECDATA, 150,150,200,11,11,18
+SECTYPE, 11, BEAM, T, T80, 0
+SECDATA, 160,80,8,8
+SECTYPE, 12, BEAM, T, T125W, 0
+SECDATA, 250,125,12,12
+
